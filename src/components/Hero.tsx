@@ -47,12 +47,10 @@ export function Hero() {
                     {/* Credentials Section */}
                     <div className="text-center lg:text-right flex flex-col items-center lg:items-end order-2 lg:order-1">
                         {/* Quote Moved Here */}
-                        <div className="mb-6 md:mb-10 w-full text-center lg:text-right px-8 md:px-0 flex flex-col gap-4">
-                            <p className="serif italic text-lg md:text-2xl leading-relaxed text-deep-charcoal">
-                                &quot;People have <span className="not-italic font-semibold text-deep-charcoal">unlimited potential</span>;&quot;
-                            </p>
-                            <p className="serif italic text-lg md:text-2xl leading-relaxed text-deep-charcoal">
-                                &quot;only unbelievable goals can create unbelievable results&quot;
+                        <div className="mb-6 md:mb-10 w-full text-center lg:text-right px-8 md:px-0 flex flex-col items-center lg:items-end">
+                            <p className="serif italic text-lg md:text-2xl leading-relaxed text-deep-charcoal max-w-[280px] md:max-w-none text-balance md:text-wrap">
+                                &quot;People have <span className="not-italic font-semibold text-deep-charcoal">unlimited potential</span>;<br />
+                                only unbelievable goals can create unbelievable&nbsp;results&quot;
                             </p>
                         </div>
 
