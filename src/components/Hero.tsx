@@ -33,9 +33,9 @@ export function Hero() {
             <div className="z-10 w-full max-w-7xl mx-auto relative flex flex-col items-center">
 
                 {/* 1. Centered Headline */}
-                <div className="text-center mb-16 lg:mb-24 z-20">
-                    <p className="uppercase tracking-[0.8em] text-[12px] md:text-[14px] mb-10 text-khaki-dark font-bold hero-visible">Personal Brand Navigational System</p>
-                    <h1 className="serif text-7xl md:text-[150px] font-light leading-[0.85] tracking-normal hero-visible mix-blend-multiply shimmer-text">
+                <div className="text-center mb-8 md:mb-16 lg:mb-24 z-20">
+                    <p className="uppercase tracking-[0.8em] text-[12px] md:text-[14px] mb-8 md:mb-10 text-khaki-dark font-bold hero-visible">Personal Brand Navigational System</p>
+                    <h1 className="serif text-[4.5rem] leading-[0.9] md:leading-[0.85] md:text-[150px] font-light tracking-tight md:tracking-normal hero-visible mix-blend-multiply shimmer-text">
                         IMAGE IS <br />
                         <span className="italic text-khaki-dark">ENERGY</span>
                     </h1>
@@ -47,9 +47,9 @@ export function Hero() {
                     {/* Credentials Section */}
                     <div className="text-center lg:text-right flex flex-col items-center lg:items-end order-2 lg:order-1">
                         {/* Quote Moved Here */}
-                        <div className="mb-10 w-full text-center lg:text-right">
+                        <div className="mb-6 md:mb-10 w-full text-center lg:text-right px-4 md:px-0">
                             <p className="serif italic text-xl md:text-2xl leading-relaxed text-deep-charcoal">
-                                &quot;People have <span className="not-italic font-semibold text-deep-charcoal">unlimited potential</span>;<br />
+                                &quot;People have <span className="not-italic font-semibold text-deep-charcoal">unlimited potential</span>;<br className="hidden md:block" />
                                 only unbelievable goals can create unbelievable results&quot;
                             </p>
                         </div>
@@ -60,15 +60,15 @@ export function Hero() {
                             International Mentor & Stylist
                         </p>
 
-                        <div className="flex flex-wrap justify-center lg:justify-end items-center gap-6 md:gap-10 border-t border-khaki-dark/20 pt-8">
+                        <div className="flex flex-col lg:flex-row justify-center lg:justify-end items-center lg:items-center gap-8 md:gap-10 border-t border-khaki-dark/20 pt-8 w-full mt-4">
                             <div className="text-center lg:text-right">
-                                <span className="text-[14px] tracking-[0.2em] font-semibold uppercase block opacity-40 mb-1">Pedagogy</span>
-                                <span className="text-[15px] tracking-[0.1em] font-bold uppercase text-deep-charcoal">16 Years Teaching</span>
+                                <span className="text-[13px] md:text-[14px] tracking-[0.2em] font-semibold uppercase block opacity-40 mb-2 md:mb-1">Pedagogy</span>
+                                <span className="text-[14px] md:text-[15px] tracking-[0.1em] font-bold uppercase text-deep-charcoal">16 Years Teaching</span>
                             </div>
                             <div className="hidden lg:block w-[1px] h-8 bg-khaki-dark/20"></div>
                             <div className="text-center lg:text-right">
-                                <span className="text-[14px] tracking-[0.2em] font-semibold uppercase block opacity-40 mb-1">Career Span</span>
-                                <span className="text-[15px] tracking-[0.1em] font-bold uppercase text-deep-charcoal">26 Years Industry</span>
+                                <span className="text-[13px] md:text-[14px] tracking-[0.2em] font-semibold uppercase block opacity-40 mb-2 md:mb-1">Career Span</span>
+                                <span className="text-[14px] md:text-[15px] tracking-[0.1em] font-bold uppercase text-deep-charcoal">26 Years Industry</span>
                             </div>
                         </div>
                     </div>
