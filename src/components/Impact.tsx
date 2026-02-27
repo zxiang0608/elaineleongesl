@@ -45,7 +45,7 @@ export function Impact() {
 
                     {/* Stat 1 */}
                     <div className="flex flex-col items-center">
-                        <h4 className="serif text-8xl md:text-[8rem] italic text-deep-charcoal mb-4 tracking-tighter">
+                        <h4 className="serif text-[18vw] sm:text-7xl md:text-[8rem] italic text-deep-charcoal mb-4 tracking-tighter">
                             <AnimatedCounter endValue={12700} duration={2500} suffix="+" />
                         </h4>
                         <p className="text-[11px] md:text-[13px] uppercase tracking-[0.5em] font-bold text-deep-charcoal mb-6">Training Achievements</p>
@@ -56,7 +56,7 @@ export function Impact() {
 
                     {/* Stat 2 */}
                     <div className="flex flex-col items-center">
-                        <h4 className="serif text-8xl md:text-[8rem] italic text-deep-charcoal mb-4 tracking-tighter">
+                        <h4 className="serif text-[18vw] sm:text-7xl md:text-[8rem] italic text-deep-charcoal mb-4 tracking-tighter">
                             <AnimatedCounter endValue={10000} duration={2500} suffix="+" />
                         </h4>
                         <p className="text-[11px] md:text-[13px] uppercase tracking-[0.5em] font-bold text-deep-charcoal mb-6">Client Portfolio</p>
