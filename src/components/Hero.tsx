@@ -28,16 +28,16 @@ export function Hero() {
     }, []);
 
     return (
-        <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-start px-6 pt-24 lg:pt-32 pb-12 overflow-hidden noise">
+        <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-start px-4 md:px-6 pt-24 lg:pt-32 pb-12 overflow-hidden w-full max-w-[100vw] noise">
 
-            <div className="z-10 w-full max-w-7xl mx-auto relative flex flex-col items-center">
+            <div className="z-10 w-full max-w-7xl mx-auto relative flex flex-col items-center overflow-hidden">
 
                 {/* 1. Centered Headline */}
-                <div className="text-center mb-8 md:mb-16 lg:mb-24 z-20">
-                    <p className="uppercase tracking-[0.8em] text-[12px] md:text-[14px] mb-8 md:mb-10 text-khaki-dark font-bold hero-visible">Personal Brand Navigational System</p>
-                    <h1 className="serif text-[4.5rem] leading-[0.9] md:leading-[0.85] md:text-[150px] font-light tracking-tight md:tracking-normal hero-visible mix-blend-multiply shimmer-text">
-                        IMAGE IS <br />
-                        <span className="italic text-khaki-dark">ENERGY</span>
+                <div className="text-center mb-8 md:mb-16 lg:mb-24 z-20 w-full max-w-full px-2">
+                    <p className="uppercase tracking-[0.8em] text-[10px] md:text-[14px] mb-8 md:mb-10 text-khaki-dark font-bold hero-visible">Personal Brand Navigational System</p>
+                    <h1 className="serif text-5xl md:text-[150px] font-light leading-[0.9] md:leading-[0.85] tracking-tight md:tracking-normal hero-visible mix-blend-multiply shimmer-text shrink-0 w-full flex flex-col items-center justify-center">
+                        <span className="block w-full">IMAGE IS</span>
+                        <span className="italic text-khaki-dark block w-full mt-2 md:mt-0">ENERGY</span>
                     </h1>
                 </div>
 
