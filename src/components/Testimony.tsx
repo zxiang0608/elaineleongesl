@@ -210,6 +210,53 @@ export function Testimony() {
                 </div>
             </div>
 
+            {/* Video Testimonies Section */}
+            <div className="container mx-auto px-4 md:px-6 mt-16 md:mt-24 relative z-10">
+                <div className="flex flex-col items-center justify-center text-center space-y-4 mb-12 lg:mb-16">
+                    <motion.h4
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        className="uppercase tracking-[0.3em] text-xs md:text-sm font-semibold text-neutral-800 dark:text-neutral-200"
+                    >
+                        Hear their stories
+                    </motion.h4>
+
+                    <motion.h3
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        className="text-4xl md:text-6xl font-serif italic text-neutral-900 dark:text-neutral-50"
+                        style={{ fontFamily: 'var(--font-playfair-display), serif' }}
+                    >
+                        Unedited <span className="text-neutral-400 dark:text-neutral-500 font-sans not-italic font-medium text-3xl md:text-5xl">Truth.</span>
+                    </motion.h3>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-6xl mx-auto">
+                    {[1, 2, 3, 4].map((_, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="relative w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-200 dark:bg-neutral-800 shadow-md group"
+                        >
+                            <iframe
+                                className="absolute inset-0 w-full h-full border-0"
+                                src="https://www.youtube.com/embed/9qDkh6e8R2Q?rel=0"
+                                title="Elaine Image Academy Testimony"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            ></iframe>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+
             <style jsx global>{`
         .hide-scrollbar::-webkit-scrollbar {
           display: none;
