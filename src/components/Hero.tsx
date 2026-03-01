@@ -34,7 +34,6 @@ export function Hero() {
 
                 {/* 1. Centered Headline */}
                 <div className="text-center mb-8 md:mb-16 lg:mb-24 z-20 w-full max-w-full px-2">
-                    <p className="uppercase tracking-[0.8em] text-[10px] md:text-[14px] mb-8 md:mb-10 text-khaki-dark font-bold hero-visible">Personal Brand Navigational System</p>
                     <h1 className="serif text-[11vw] sm:text-6xl md:text-[150px] font-light leading-[0.9] md:leading-[0.85] tracking-tight md:tracking-normal hero-visible mix-blend-multiply shimmer-text shrink-0 w-full flex flex-col items-center justify-center">
                         <span className="block w-full whitespace-nowrap">IMAGE IS</span>
                         <span className="italic text-khaki-dark block w-full mt-2 md:mt-0 whitespace-nowrap">ENERGY</span>
@@ -46,7 +45,12 @@ export function Hero() {
 
                     {/* Credentials Section */}
                     <div className="text-center lg:text-right flex flex-col items-center lg:items-end order-2 lg:order-1">
-                        {/* Quote Moved Here */}
+                        <p className="serif text-4xl md:text-6xl font-bold text-deep-charcoal mb-2 tracking-tight">Elaine Leong</p>
+                        <h2 className="serif text-3xl md:text-4xl italic text-khaki-dark leading-tight mb-4">Image & Energy Consultant</h2>
+                        <p className="text-[11px] md:text-[13px] font-sans font-bold tracking-[0.25em] uppercase text-deep-charcoal opacity-40 mb-6 md:mb-10 leading-relaxed">
+                            International Mentor & Stylist
+                        </p>
+
                         <div className="mb-6 md:mb-10 w-full text-center lg:text-right px-8 md:px-0 flex flex-col items-center lg:items-end">
                             <p className="serif italic text-base md:text-2xl leading-relaxed text-deep-charcoal text-center md:text-right md:text-wrap">
                                 &quot;People have <span className="not-italic font-semibold text-deep-charcoal">unlimited potential</span>;<br />
@@ -54,12 +58,6 @@ export function Hero() {
                                 <span className="hidden md:inline"> </span>create unbelievable results&quot;
                             </p>
                         </div>
-
-                        <p className="serif text-4xl md:text-6xl font-bold text-deep-charcoal mb-2 tracking-tight">Elaine Leong</p>
-                        <h2 className="serif text-3xl md:text-4xl italic text-khaki-dark leading-tight mb-4">Image & Energy Consultant</h2>
-                        <p className="text-[11px] md:text-[13px] font-sans font-bold tracking-[0.25em] uppercase text-deep-charcoal opacity-40 mb-10 leading-relaxed">
-                            International Mentor & Stylist
-                        </p>
 
                         <div className="flex flex-col lg:flex-row justify-center lg:justify-end items-center lg:items-center gap-8 md:gap-10 border-t border-khaki-dark/20 pt-8 w-full mt-4">
                             <div className="text-center lg:text-right">

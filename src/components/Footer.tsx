@@ -7,40 +7,43 @@ export function Footer() {
         { name: 'Instagram', url: 'https://www.instagram.com/invites/contact/?i=arx46j9p69tp&utm_content=6o2nnv9' },
         { name: 'Xiaohongshu', url: 'https://www.xiaohongshu.com/user/profile/5eba09e50000000001006871?xhsshare=CopyLink&appuid=5eba09e50000000001006871&apptime=1666870698' },
         { name: 'TikTok', url: 'https://vt.tiktok.com/ZSJD2BY41/' },
-        { name: 'Facebook Page', url: 'https://www.facebook.com/esl27/' },
-        { name: 'Facebook Profile', url: 'https://www.facebook.com/elaineleong0327' },
+        { name: 'Facebook', url: 'https://www.facebook.com/esl27/' },
     ];
     return (
-        <footer id="contact" className="studio-vignette text-deep-charcoal noise pt-24 pb-12 px-6 md:px-12 lg:px-24 relative z-10 border-t border-black/5">
-            <div className="max-w-7xl mx-auto flex flex-col items-center">
+        <footer id="contact" className="studio-vignette text-deep-charcoal noise pt-24 pb-12 relative z-10 border-t border-black/5 overflow-hidden">
+            <div className="w-full flex flex-col items-center">
 
                 {/* 1. Header & Ecosystem */}
-                <div className="w-full mb-20 md:mb-32 flex flex-col items-start md:items-center text-left md:text-center">
+                <div className="w-full mb-12 md:mb-20 flex flex-col items-center text-center px-6">
                     <p className="text-[10px] md:text-[12px] tracking-[0.3em] uppercase font-bold text-khaki-dark mb-4">ESL Image Consultancy</p>
-                    <h2 className="serif text-5xl md:text-7xl lg:text-[7rem] leading-none mb-12 md:mb-16">
-                        Connect with the <br className="hidden md:block" />
-                        <span className="italic text-khaki-dark">Ecosystem.</span>
+                    <h2 className="serif text-3xl md:text-5xl leading-none">
+                        Connect with the <span className="italic text-khaki-dark">Ecosystem.</span>
                     </h2>
+                </div>
 
-                    {/* High-Visibility Social Grid */}
-                    <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 md:gap-x-12 md:gap-y-8 w-full">
-                        {socials.map((social) => (
-                            <a
-                                key={social.name}
-                                href={social.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex items-center justify-between md:justify-center gap-4 text-xl md:text-2xl lg:text-3xl font-medium tracking-tight hover:text-khaki-dark transition-colors border-b border-black/10 md:border-none pb-4 md:pb-0"
-                            >
-                                <span className="group-hover:italic transition-all duration-300">{social.name}</span>
-                                <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
-                            </a>
-                        ))}
-                    </div>
+                {/* 9.5 Editorial Marquee Menu */}
+                <div className="w-full flex flex-col items-center justify-center mb-24 md:mb-32">
+                    {socials.map((social) => (
+                        <a
+                            key={social.name}
+                            href={social.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative w-full text-center py-2 md:py-4 transition-all duration-500 hover:bg-black/5"
+                        >
+                            <h3 className="serif text-6xl md:text-[8rem] lg:text-[11rem] leading-[0.8] md:leading-[0.8] tracking-tighter opacity-30 group-hover:opacity-100 group-hover:italic transition-all duration-500 text-deep-charcoal relative z-10 mix-blend-multiply">
+                                {social.name}
+                            </h3>
+                            {/* Hidden Image that appears on hover - acts as the luxury editorial layer */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[200px] lg:w-[500px] lg:h-[300px] opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-700 pointer-events-none z-0 rounded-2xl overflow-hidden shadow-2xl skew-y-3 group-hover:skew-y-0">
+                                <img src="/images/hero-portrait.jpg" alt={`${social.name} Background`} className="w-full h-full object-cover grayscale mix-blend-overlay brightness-75 blur-[2px] group-hover:blur-0 transition-all duration-700" />
+                            </div>
+                        </a>
+                    ))}
                 </div>
 
                 {/* 2. Primary CTA: WhatsApp */}
-                <div className="w-full border-t border-black/10 pt-20 md:pt-32 flex flex-col items-center text-center">
+                <div className="w-full max-w-7xl px-6 border-t border-black/10 pt-20 md:pt-32 flex flex-col items-center text-center">
                     <p className="text-xl md:text-3xl serif italic text-deep-charcoal/60 mb-8">Ready to shift your energy?</p>
                     <a
                         href="https://wa.link/838cs5"
@@ -57,7 +60,7 @@ export function Footer() {
                 </div>
 
                 {/* 3. Footer Copyright */}
-                <div className="w-full mt-24 pt-8 border-t border-deep-charcoal/10 flex flex-col md:flex-row justify-between items-center gap-4 opacity-50 text-[8px] md:text-[9px] uppercase tracking-widest text-deep-charcoal">
+                <div className="w-full max-w-7xl px-6 mt-24 pt-8 border-t border-deep-charcoal/10 flex flex-col md:flex-row justify-between items-center gap-4 opacity-50 text-[8px] md:text-[9px] uppercase tracking-widest text-deep-charcoal">
                     <span>© {new Date().getFullYear()} ESL Image Consultancy. All rights reserved.</span>
                     <span>Klang Valley, Selangor</span>
                 </div>
