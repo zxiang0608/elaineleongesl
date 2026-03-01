@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { motion, useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface TestimonyCardProps {
     beforeImage: string;
@@ -109,12 +109,32 @@ export function Testimony() {
         }
     ];
 
-    const scrollContainerRef = useRef<HTMLDivElement>(null);
-    const { scrollXProgress } = useScroll({ container: scrollContainerRef });
+    const writtenTestimonies = [
+        {
+            quote: "I've never felt so powerful entering a boardroom. Elaine didn't just change my wardrobe; she re-engineered my entire executive aura. The results were immediate.",
+            name: "Sarah Jenkins",
+            role: "Chief Marketing Officer"
+        },
+        {
+            quote: "The 'Shift' is real. Within 3 weeks of implementing the aesthetic frequency alignment, our closing rate on high-ticket enterprise contracts increased by 40%.",
+            name: "David Chen",
+            role: "Founder & CEO, TechVentures"
+        },
+        {
+            quote: "Elaine understands the psychology of first impressions better than anyone in the industry. Her approach is clinical, precise, and undeniably effective.",
+            name: "Marcus Thorne",
+            role: "VP of Global Sales"
+        },
+        {
+            quote: "It's not about fashion; it's about visual authority. I went from being interrupted in meetings to commanding the room before I even spoke. Truly transformative.",
+            name: "Elena Rodriguez",
+            role: "Managing Director"
+        }
+    ];
 
     return (
         <section className="relative w-full py-24 md:py-32 bg-[#FAF9F6] dark:bg-neutral-950 overflow-hidden">
-            <div className="container mx-auto px-4 md:px-6 mb-16 relative z-10">
+            <div className="container mx-auto px-4 md:px-6 mb-12 md:mb-16 relative z-10">
                 <div className="flex flex-col items-center justify-center text-center space-y-6">
                     <motion.h4
                         initial={{ opacity: 0, y: 10 }}
@@ -152,30 +172,23 @@ export function Testimony() {
                 </div>
             </div>
 
-            <div className="relative w-full overflow-hidden">
-                {/* Desktop Grid Layout (lg+), Scrollable Container for Mobile/Tablet */}
-                <div
-                    ref={scrollContainerRef}
-                    className="flex overflow-x-auto lg:grid lg:grid-cols-4 snap-x snap-mandatory lg:snap-none hide-scrollbar gap-4 md:gap-6 px-4 md:px-12 lg:px-8 pb-12 pt-4 items-start"
-                >
-                    {/* Spacer for mobile/tablet only */}
-                    <div className="flex-shrink-0 w-4 md:w-8 lg:hidden" aria-hidden="true" />
-
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 lg:gap-8 max-w-[1400px] mx-auto">
                     {testimonies.map((testimony, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
+                            viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="snap-center w-[85vw] sm:w-[350px] lg:w-auto flex-shrink-0 lg:flex-shrink flex flex-col gap-6"
+                            className="w-full flex flex-col gap-5 lg:gap-6 mx-auto max-w-[400px] lg:max-w-none"
                         >
-                            <div className="w-full aspect-square sm:aspect-[3/4]">
+                            <div className="w-full aspect-square md:aspect-[3/4]">
                                 <TestimonyCard beforeImage={testimony.before} afterImage={testimony.after} />
                             </div>
 
-                            {/* Card Details (Mobile specific matching reference) */}
-                            <div className="flex flex-col space-y-2 px-1">
+                            {/* Card Details */}
+                            <div className="flex flex-col space-y-2 px-1 text-center md:text-left">
                                 <span className="uppercase tracking-[0.15em] text-[10px] font-bold text-neutral-500 dark:text-neutral-400">
                                     {testimony.tag}
                                 </span>
@@ -188,30 +201,11 @@ export function Testimony() {
                             </div>
                         </motion.div>
                     ))}
-
-                    {/* Spacer for mobile/tablet only */}
-                    <div className="flex-shrink-0 w-4 md:w-8 lg:hidden" aria-hidden="true" />
-                </div>
-
-                {/* Mobile Scroll Progress Indicator */}
-                <div className="flex lg:hidden flex-col items-center justify-center mt-2 mb-8 space-y-3">
-                    <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-neutral-400 dark:text-neutral-500">
-                        Swipe to explore
-                    </span>
-                    <div className="w-full max-w-[150px] h-[2px] bg-neutral-200 dark:bg-neutral-800 rounded-full overflow-hidden">
-                        <motion.div
-                            className="h-full bg-neutral-800 dark:bg-neutral-300"
-                            style={{
-                                scaleX: scrollXProgress,
-                                transformOrigin: 'left'
-                            }}
-                        />
-                    </div>
                 </div>
             </div>
 
             {/* Video Testimonies Section */}
-            <div className="container mx-auto px-4 md:px-6 mt-16 md:mt-24 relative z-10">
+            <div className="container mx-auto px-4 md:px-6 mt-16 md:mt-24 relative z-10" >
                 <div className="flex flex-col items-center justify-center text-center space-y-4 mb-12 lg:mb-16">
                     <motion.h4
                         initial={{ opacity: 0, y: 10 }}
@@ -257,15 +251,55 @@ export function Testimony() {
                 </div>
             </div>
 
-            <style jsx global>{`
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
+            {/* Written Testimonies Section */}
+            <div className="container mx-auto px-4 md:px-6 mt-16 md:mt-24 lg:mt-32 relative z-10 pb-12">
+                <div className="flex flex-col items-center justify-center text-center space-y-4 mb-12">
+                    <motion.h4
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        className="uppercase tracking-[0.3em] text-xs md:text-sm font-semibold text-neutral-800 dark:text-neutral-200"
+                    >
+                        The Impact
+                    </motion.h4>
+                    <motion.h3
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        className="text-3xl md:text-5xl font-serif italic text-neutral-900 dark:text-neutral-50"
+                        style={{ fontFamily: 'var(--font-playfair-display), serif' }}
+                    >
+                        Words of <span className="text-neutral-400 dark:text-neutral-500 font-sans not-italic font-medium text-2xl md:text-4xl">Authority.</span>
+                    </motion.h3>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+                    {writtenTestimonies.map((item, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="bg-white dark:bg-neutral-900 p-8 md:p-10 rounded-2xl shadow-sm border border-neutral-100 dark:border-neutral-800 flex flex-col justify-between"
+                        >
+                            <p className="text-lg md:text-xl text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8 italic font-serif">
+                                "{item.quote}"
+                            </p>
+                            <div>
+                                <h4 className="font-bold text-neutral-900 dark:text-neutral-100 uppercase tracking-widest text-xs mb-1">
+                                    {item.name}
+                                </h4>
+                                <p className="text-neutral-500 dark:text-neutral-400 text-sm">
+                                    {item.role}
+                                </p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
         </section>
     );
 }
