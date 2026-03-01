@@ -28,7 +28,7 @@ export function Hero() {
     }, []);
 
     return (
-        <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-start px-4 md:px-6 pt-24 lg:pt-32 pb-12 overflow-hidden w-full max-w-[100vw] noise hero-vignette">
+        <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-start px-4 md:px-6 pt-24 lg:pt-32 pb-12 overflow-hidden w-full max-w-[100vw] noise">
 
             <div className="z-10 w-full max-w-7xl mx-auto relative flex flex-col items-center overflow-hidden">
 

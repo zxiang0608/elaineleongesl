@@ -133,7 +133,7 @@ export function Testimony() {
     ];
 
     return (
-        <section className="relative w-full py-24 md:py-32 bg-[#FAF9F6] dark:bg-neutral-950 overflow-hidden">
+        <section className="relative w-full py-24 md:py-32 studio-vignette text-deep-charcoal noise overflow-hidden">
             <div className="container mx-auto px-4 md:px-6 mb-12 md:mb-16 relative z-10">
                 <div className="flex flex-col items-center justify-center text-center space-y-6">
                     <motion.h4

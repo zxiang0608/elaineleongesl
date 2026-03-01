@@ -29,7 +29,7 @@ export function Impact() {
     }, []);
 
     return (
-        <section ref={sectionRef} id="impact" className="py-20 md:py-32 px-6 md:px-24 bg-[#F5F2EC] relative z-10 border-t border-black/5">
+        <section ref={sectionRef} id="impact" className="py-20 md:py-32 px-6 md:px-24 studio-vignette text-deep-charcoal noise relative z-10 border-t border-black/5">
             <div className="max-w-6xl mx-auto">
 
                 {/* Scale of Influence Header */}

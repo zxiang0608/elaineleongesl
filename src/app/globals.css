@@ -139,7 +139,7 @@
     transform: translateY(0px) scale(1);
   }
 
-  .hero-vignette {
+  .studio-vignette {
     background: radial-gradient(circle at 50% 45%, #DED4C3 0%, #C3B091 75%);
   }
 
