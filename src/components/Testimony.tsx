@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 
 interface TestimonyCardProps {
     beforeImage: string;
@@ -109,6 +109,9 @@ export function Testimony() {
         }
     ];
 
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const { scrollXProgress } = useScroll({ container: scrollContainerRef });
+
     return (
         <section className="relative w-full py-24 md:py-32 bg-[#FAF9F6] dark:bg-neutral-950 overflow-hidden">
             <div className="container mx-auto px-4 md:px-6 mb-16 relative z-10">
@@ -151,7 +154,10 @@ export function Testimony() {
 
             <div className="relative w-full overflow-hidden">
                 {/* Desktop Grid Layout (lg+), Scrollable Container for Mobile/Tablet */}
-                <div className="flex overflow-x-auto lg:grid lg:grid-cols-4 snap-x snap-mandatory lg:snap-none hide-scrollbar gap-4 md:gap-6 px-4 md:px-12 lg:px-8 pb-12 pt-4 items-start">
+                <div
+                    ref={scrollContainerRef}
+                    className="flex overflow-x-auto lg:grid lg:grid-cols-4 snap-x snap-mandatory lg:snap-none hide-scrollbar gap-4 md:gap-6 px-4 md:px-12 lg:px-8 pb-12 pt-4 items-start"
+                >
                     {/* Spacer for mobile/tablet only */}
                     <div className="flex-shrink-0 w-4 md:w-8 lg:hidden" aria-hidden="true" />
 
@@ -185,6 +191,22 @@ export function Testimony() {
 
                     {/* Spacer for mobile/tablet only */}
                     <div className="flex-shrink-0 w-4 md:w-8 lg:hidden" aria-hidden="true" />
+                </div>
+
+                {/* Mobile Scroll Progress Indicator */}
+                <div className="flex lg:hidden flex-col items-center justify-center mt-2 mb-8 space-y-3">
+                    <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-neutral-400 dark:text-neutral-500">
+                        Swipe to explore
+                    </span>
+                    <div className="w-full max-w-[150px] h-[2px] bg-neutral-200 dark:bg-neutral-800 rounded-full overflow-hidden">
+                        <motion.div
+                            className="h-full bg-neutral-800 dark:bg-neutral-300"
+                            style={{
+                                scaleX: scrollXProgress,
+                                transformOrigin: 'left'
+                            }}
+                        />
+                    </div>
                 </div>
             </div>
 
