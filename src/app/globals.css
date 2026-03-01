@@ -139,6 +139,10 @@
     transform: translateY(0px) scale(1);
   }
 
+  .hero-vignette {
+    background: radial-gradient(circle at 50% 45%, #DED4C3 0%, #C3B091 75%);
+  }
+
   .hero-visible {
     filter: blur(0px) !important;
     opacity: 1 !important;
