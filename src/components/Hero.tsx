@@ -28,12 +28,12 @@ export function Hero() {
     }, []);
 
     return (
-        <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-start px-4 md:px-6 pt-24 lg:pt-32 pb-12 overflow-hidden w-full max-w-[100vw] noise">
+        <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-start px-4 md:px-6 pt-16 md:pt-24 lg:pt-32 pb-12 overflow-hidden w-full max-w-[100vw] noise">
 
             <div className="z-10 w-full max-w-7xl mx-auto relative flex flex-col items-center overflow-hidden">
 
                 {/* 1. Centered Headline */}
-                <div className="text-center mb-8 md:mb-16 lg:mb-24 z-20 w-full max-w-full px-2">
+                <div className="text-center mb-6 md:mb-16 lg:mb-24 z-20 w-full max-w-full px-2">
                     <h1 className="serif text-[11vw] sm:text-6xl md:text-[150px] font-light leading-[0.9] md:leading-[0.85] tracking-tight md:tracking-normal hero-visible mix-blend-multiply shimmer-text shrink-0 w-full flex flex-col items-center justify-center">
                         <span className="block w-full whitespace-nowrap">IMAGE IS</span>
                         <span className="italic text-khaki-dark block w-full mt-2 md:mt-0 whitespace-nowrap">ENERGY</span>
@@ -41,7 +41,7 @@ export function Hero() {
                 </div>
 
                 {/* 2. Interlocked Content */}
-                <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 hero-visible relative z-10 w-full">
+                <div className="flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-12 lg:gap-20 hero-visible relative z-10 w-full">
 
                     {/* Credentials Section */}
                     <div className="text-center lg:text-right flex flex-col items-center lg:items-end order-2 lg:order-1">

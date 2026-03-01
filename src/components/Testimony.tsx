@@ -133,7 +133,7 @@ export function Testimony() {
     ];
 
     return (
-        <section className="relative w-full py-24 md:py-32 studio-vignette text-deep-charcoal noise overflow-hidden">
+        <section className="relative w-full py-16 md:py-24 lg:py-32 studio-vignette text-deep-charcoal noise overflow-hidden">
             <div className="container mx-auto px-4 md:px-6 mb-12 md:mb-16 relative z-10">
                 <div className="flex flex-col items-center justify-center text-center space-y-6">
                     <motion.h4
@@ -151,7 +151,7 @@ export function Testimony() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-6xl sm:text-7xl md:text-8xl lg:text-[10rem] font-serif italic text-neutral-900 dark:text-neutral-50 leading-none"
+                        className="text-[11vw] sm:text-6xl md:text-8xl lg:text-[10rem] font-serif italic text-neutral-900 dark:text-neutral-50 leading-none"
                         style={{
                             fontFamily: 'var(--font-playfair-display), serif',
                             fontWeight: 400
@@ -229,7 +229,7 @@ export function Testimony() {
                     </motion.h3>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
                     {[1, 2, 3, 4].map((_, index) => (
                         <motion.div
                             key={index}

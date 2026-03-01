@@ -29,13 +29,13 @@ export function Impact() {
     }, []);
 
     return (
-        <section ref={sectionRef} id="impact" className="py-20 md:py-32 px-6 md:px-24 studio-vignette text-deep-charcoal noise relative z-10 border-t border-black/5">
+        <section ref={sectionRef} id="impact" className="py-16 md:py-24 lg:py-32 px-6 md:px-24 studio-vignette text-deep-charcoal noise relative z-10 border-t border-black/5">
             <div className="max-w-6xl mx-auto">
 
                 {/* Scale of Influence Header */}
                 <div className="text-center mb-8 md:mb-12 blur-reveal">
                     <span className="text-[11px] uppercase tracking-[0.6em] text-deep-charcoal font-bold block mb-6">Scale of Influence</span>
-                    <h2 className="serif text-6xl md:text-9xl text-deep-charcoal">
+                    <h2 className="serif text-[11vw] sm:text-6xl md:text-8xl lg:text-9xl text-deep-charcoal">
                         <span className="italic">The</span> <span className="text-khaki-dark opacity-60">Impact.</span>
                     </h2>
                 </div>
@@ -67,9 +67,9 @@ export function Impact() {
                 </div>
 
                 {/* The Authority Header */}
-                <div className="mt-40 mb-20 text-center blur-reveal">
+                <div className="mt-24 md:mt-40 mb-12 md:mb-20 text-center blur-reveal">
                     <span className="text-[11px] uppercase tracking-[0.6em] text-deep-charcoal font-bold block mb-6">The Pedigree of Excellence</span>
-                    <h2 className="serif text-6xl md:text-9xl text-deep-charcoal">
+                    <h2 className="serif text-[11vw] sm:text-6xl md:text-8xl lg:text-9xl text-deep-charcoal">
                         <span className="italic">The</span> <span className="text-khaki-dark opacity-60">Authority.</span>
                     </h2>
                 </div>
