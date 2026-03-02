@@ -140,7 +140,7 @@
   }
 
   .studio-vignette {
-    background: radial-gradient(circle at 50% 45%, #DED4C3 0%, #C3B091 75%);
+    background: radial-gradient(circle at 50% 45%, #EBE1D0 0%, var(--background) 75%);
   }
 
   .hero-visible {
