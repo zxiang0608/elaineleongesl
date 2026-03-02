@@ -13,10 +13,8 @@ export function Navbar() {
         <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-[#121212]">ESL Academy</span>
       </div>
       <div className="hidden md:flex space-x-12 text-[9px] uppercase tracking-[0.3em] font-semibold opacity-70 text-[#121212]">
-        <Link href="#impact" className="hover:text-[#8E7D62] transition-colors">Achievements</Link>
-        <Link href="#ability" className="hover:text-[#8E7D62] transition-colors">Framework</Link>
-        <Link href="#offerings" className="hover:text-[#8E7D62] transition-colors">Services</Link>
-        <Link href="#transformations" className="hover:text-[#8E7D62] transition-colors">The Shift</Link>
+        <Link href="#impact" className="hover:text-[#8E7D62] transition-colors">The Impact</Link>
+        <Link href="#testimony" className="hover:text-[#8E7D62] transition-colors">The Shift</Link>
         <Link href="#contact" className="px-6 py-2.5 bg-[#121212] text-white rounded-full hover:bg-[#8E7D62] transition-all transform hover:scale-105 shadow-xl">Find My Direction</Link>
       </div>
 
@@ -32,10 +30,8 @@ export function Navbar() {
       {/* Mobile Menu Overlay */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-[#F4F1EA] shadow-xl py-6 px-8 flex flex-col gap-6 md:hidden">
-          <Link href="#impact" onClick={() => setIsOpen(false)} className="text-xs uppercase tracking-[0.3em] font-bold text-[#121212]">Achievements</Link>
-          <Link href="#ability" onClick={() => setIsOpen(false)} className="text-xs uppercase tracking-[0.3em] font-bold text-[#121212]">Framework</Link>
-          <Link href="#offerings" onClick={() => setIsOpen(false)} className="text-xs uppercase tracking-[0.3em] font-bold text-[#121212]">Services</Link>
-          <Link href="#transformations" onClick={() => setIsOpen(false)} className="text-xs uppercase tracking-[0.3em] font-bold text-[#121212]">The Shift</Link>
+          <Link href="#impact" onClick={() => setIsOpen(false)} className="text-xs uppercase tracking-[0.3em] font-bold text-[#121212]">The Impact</Link>
+          <Link href="#testimony" onClick={() => setIsOpen(false)} className="text-xs uppercase tracking-[0.3em] font-bold text-[#121212]">The Shift</Link>
           <Link href="#contact" onClick={() => setIsOpen(false)} className="text-xs uppercase tracking-[0.3em] font-bold text-[#121212] pt-4 border-t border-black/10">Find My Direction</Link>
         </div>
       )}
